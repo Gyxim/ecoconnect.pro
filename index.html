@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EcoConnect Pro</title>
+  <title>EcoConnect Pro – Leadgen Community</title>
   <style>
     body { margin:0; font-family: sans-serif; background: #f0fdf4; color: #1f2937; }
     header { background: #dcfce7; padding: 2rem; text-align: center; position: relative; }
@@ -12,24 +12,24 @@
     header p { margin-top:0.5rem; color:#4b5563; max-width:600px; margin:0 auto; }
     .btn { display:inline-block; margin-top:1rem; background:#16a34a; color:#fff; padding:0.75rem 1.5rem; border-radius:6px; text-decoration:none; }
     section { padding:4rem 1rem; }
+    h2 { text-align:center; color:#166534; margin-bottom:1rem; }
+    ul { max-width:600px; margin:0 auto; list-style: none; padding:0; }
+    ul li { margin:0.5rem 0; padding-left:1.5rem; position: relative; }
+    ul li:before { content: '✔'; position: absolute; left:0; color:#16a34a; }
     .grid { display:grid; gap:1.5rem; }
     .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
     .card { background:#fff; border-radius:8px; padding:1.5rem; text-align:left; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
     .card h3 { margin:0.5rem 0; color:#166534; }
-    .card p { margin:0.5rem 0; color:#4b5563; font-size:0.95rem; }
-    .card ul { margin:0.5rem 0 0 1rem; padding:0; color:#4b5563; font-size:0.9rem; }
-    form { max-width:500px; margin:0 auto; display:grid; gap:1rem; }
-    input, textarea { width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px; }
+    .card ul { margin:0; padding-left:1rem; color:#4b5563; font-size:0.9rem; }
+    /* Tabs */
     .tabs { max-width:600px; margin:0 auto; }
     .tabs nav { display:flex; }
     .tabs button { flex:1; padding:0.75rem; border:none; background:#e5e7eb; cursor:pointer; }
     .tabs button.active { background:#16a34a; color:#fff; }
     .tabs .content { display:none; background:#fff; padding:1.5rem; border:1px solid #cbd5e1; border-top:none; }
     .tabs .content.active { display:block; }
-    .accordion { max-width:800px; margin:2rem auto; }
-    .accordion details { background:#fff; margin-bottom:1rem; border-radius:6px; padding:1rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
-    .accordion summary { font-weight:bold; color:#166534; cursor:pointer; }
-    .note { background:#fff3cd; color:#856404; padding:1rem; text-align:center; margin:2rem 0; border-radius:4px; }
+    .plans { max-width:600px; margin:0 auto; }
+    .plan { background:#fff; border-radius:6px; padding:1rem; margin:1rem 0; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
     footer { background:#dcfce7; padding:2rem; text-align:center; font-size:0.8rem; color:#4b5563; }
     @media (min-width:640px) { header h1 { font-size:3rem; } section { padding:6rem 2rem; } }
   </style>
@@ -38,137 +38,95 @@
 
   <header>
     <img src="logo.svg" alt="EcoConnect Pro Logo">
-    <h1>EcoConnect Pro</h1>
-    <p>La piattaforma eco‑friendly in sviluppo, vetrina di test per creare community di professionisti e aziende etiche.</p>
-    <a href="#form" class="btn">Unisciti Ora</a>
+    <h1>EcoConnect Pro – Leadgen Community</h1>
+    <p>Un nuovo modello etico di generazione contatti, formazione e lavoro freelance. Eco, AI e libertà. Tutto in un’unica piattaforma.</p>
+    <a href="#come-funziona" class="btn">Scopri Come Funziona</a>
   </header>
 
-  <section>
-    <h2 style="text-align:center; color:#166534;">Come funziona</h2>
-    <div class="grid grid-3" style="margin-top:2rem;">
+  <section id="come-funziona">
+    <h2>Come funziona?</h2>
+    <ul>
+      <li>Candidati con il tuo profilo</li>
+      <li>Accedi alla formazione</li>
+      <li>Diventa operativo nel marketplace</li>
+      <li>Ricevi contatti da aziende etiche</li>
+      <li>Collabora, guadagna, crea impatto</li>
+    </ul>
+  </section>
+
+  <section id="servizi">
+    <h2>Servizi Principali</h2>
+    <div class="grid grid-3">
       <div class="card">
-        <h3>1. Scegli il tuo ruolo</h3>
-        <p>Seleziona o aggrega competenze:</p>
-        <ul>
-          <li><strong>Funnel Strategist</strong>: Progetta funnel di acquisizione e landing page.</li>
-          <li><strong>Setter</strong>: Pre-qualifica i lead tramite chat, email o call.</li>
-          <li><strong>Closer</strong>: Gestisce la chiusura dei contratti con approccio etico.</li>
-          <li><strong>Team Builder</strong>: Crea team modulari su misura.</li>
-        </ul>
+        <h3>🌀 Lead Generation Agency Etica</h3>
+        <p>Servizi di scouting, contatto, allineamento e conversione per aziende e freelance.</p>
       </div>
       <div class="card">
-        <h3>2. Crea il tuo profilo etico</h3>
-        <p>Costruisci la tua reputazione sostenibile:</p>
-        <ul>
-          <li>Esperienza, casi studio e valori.</li>
-          <li>Badge di merito per competenze e sostenibilità.</li>
-          <li>Feedback delle aziende.</li>
-        </ul>
+        <h3>📚 Accademia Etica & AI Toolkit</h3>
+        <p>Formazione su strumenti pratici e valoriali, prompt GPT, SOP e aggiornamenti continui.</p>
       </div>
       <div class="card">
-        <h3>3. Connettiti e collabora</h3>
-        <p>Lavora in autonomia o in team:</p>
-        <ul>
-          <li>Progetti in linea con i tuoi valori.</li>
-          <li>Partecipazione a team esistenti o creazione di nuovi.</li>
-          <li>Strumenti AI e formazione continua.</li>
-        </ul>
+        <h3>🌱 Community e Progetti Collaborativi</h3>
+        <p>Spazio valoriale per dialoghi, supporto peer-to-peer, eventi e co-creazione.</p>
       </div>
     </div>
   </section>
 
-  <div class="note">🚧 Startup in fase di sviluppo. Aggiornamenti continui in arrivo!</div>
+  <section id="ruoli">
+    <h2>Ruoli Disponibili</h2>
+    <ul>
+      <li>Strategia Funnel / Automation</li>
+      <li>Setter & Closer etici</li>
+      <li>Growth Marketer</li>
+      <li>Designer & Copy etici</li>
+    </ul>
+  </section>
 
-  <section id="profiles">
-    <h2 style="text-align:center; color:#166534;">Profili Professionali</h2>
-    <div class="accordion">
-      <details>
-        <summary>Funnel Strategist</summary>
-        <p>Specialista in creazione di funnel, landing page, strategie ADS e automazioni.</p>
-      </details>
-      <details>
-        <summary>Setter</summary>
-        <p>Esperto nel contatto e qualificazione lead, tramite chat, email e telefonate.</p>
-      </details>
-      <details>
-        <summary>Closer</summary>
-        <p>Professionista nella conclusione di contratti con approccio etico e consulenziale.</p>
-      </details>
-      <details>
-        <summary>Team Builder</summary>
-        <p>Coordinatore di micro-team flessibili per progetti personalizzati.</p>
-      </details>
+  <section id="piani" style="background:#ecfdf5;">
+    <h2>Piani PRO & Costi</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Professionisti</h3>
+        <p>Accesso gratuito</p>
+        <p>Fee su prestazione: 15–20%</p>
+        <h4>Piani opzionali</h4>
+        <ul>
+          <li>🌍 Eco Starter: 9–19 €/mese</li>
+          <li>🌱 Ethical Growth: 29–49 €/mese</li>
+          <li>🌿 Green Partner: 99–189 €/mese</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Aziende</h3>
+        <p>Accesso gratuito</p>
+        <p>Commissione % per ogni servizio</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">Pagamenti accettati: EUR, USDT, BTC, ETH</p>
+    <p style="text-align:center;">Progetto pensato per un futuro decentralizzato.</p>
+  </section>
+
+  <section id="whitepaper">
+    <h2 style="text-align:center;">White Paper - Fase 1</h2>
+    <p style="text-align:center;">Scopri la visione iniziale, il modello economico e i prossimi passi.</p>
+    <div style="text-align:center;">
+      <a href="https://raw.githubusercontent.com/Gyxim/ecoconnectpro/main/EcoConnectPro_WhitePaper.pdf" class="btn" target="_blank">Scarica White Paper</a>
     </div>
   </section>
 
-  <section style="background:#ecfdf5;" id="form">
-    <h2 style="text-align:center; color:#166534;">Accesso Gratuito</h2>
-    <div class="tabs">
-      <nav>
-        <button id="tab-pro" class="active">Professionisti</button>
-        <button id="tab-aziende">Aziende</button>
-      </nav>
-      <div id="content-pro" class="content active">
-        <form>
-          <input type="text" placeholder="Nome completo" required>
-          <input type="email" placeholder="Email" required>
-          <input type="text" placeholder="Ruolo" required>
-          <textarea rows="3" placeholder="Valori e motivazione" required></textarea>
-          <button type="submit" class="btn">Registrati Gratis</button>
-        </form>
-      </div>
-      <div id="content-aziende" class="content">
-        <form>
-          <input type="text" placeholder="Nome Azienda" required>
-          <input type="email" placeholder="Email aziendale" required>
-          <input type="text" placeholder="Settore di interesse" required>
-          <textarea rows="3" placeholder="Esigenze principali" required></textarea>
-          <button type="submit" class="btn">Registrati Gratis</button>
-        </form>
-      </div>
-    </div>
+  <section id="ai-assistant">
+    <h2 style="text-align:center;">AI Assistant</h2>
+    <p style="text-align:center;">In fase di aggiornamento, prossima integrazione per onboarding e supporto continuo.</p>
   </section>
 
-  <section style="text-align:center;">
-    <h2 style="color:#166534;">White Paper - Fase 1</h2>
-    <p>Scopri la visione iniziale di EcoConnect Pro, il modello economico e i prossimi passi.</p>
-    <a href="https://raw.githubusercontent.com/Gyxim/ecoconnectpro/main/EcoConnectPro_WhitePaper.pdf" class="btn" target="_blank">Scarica White Paper</a>
-  </section>
-
-  <section style="background:#ecfdf5; text-align:center;">
-    <h2 style="color:#166534;">Modello Economico</h2>
-    <p>Accesso gratuito → Commissioni: 15% aziende / 10% professionisti</p>
-    <p>Servizi opzionali: pacchetti PRO, formazione avanzata, branding etico.</p>
-  </section>
-
-  <section style="text-align:center;">
-    <h2 style="color:#166534;">AI Assistant</h2>
-    <p>In fase di aggiornamento, prossima integrazione per onboarding e supporto continuo.</p>
-  </section>
-
-  <section style="background:#f7fdfa; text-align:center;">
-    <h2 style="color:#166534;">Contatti</h2>
+  <section id="contatti" style="background:#f7fdfa; text-align:center;">
+    <h2>Contatti</h2>
     <p>Per ora contattaci via email: ecoconnect.pro@gmail.com</p>
   </section>
 
   <footer>
     © 2025 EcoConnect Pro – Piattaforma Etica e in Sviluppo
   </footer>
-
-  <script>
-    document.getElementById('tab-pro').onclick = () => {
-      document.getElementById('content-pro').classList.add('active');
-      document.getElementById('content-aziende').classList.remove('active');
-      document.getElementById('tab-pro').classList.add('active');
-      document.getElementById('tab-aziende').classList.remove('active');
-    };
-    document.getElementById('tab-aziende').onclick = () => {
-      document.getElementById('content-pro').classList.remove('active');
-      document.getElementById('content-aziende').classList.add('active');
-      document.getElementById('tab-pro').classList.remove('active');
-      document.getElementById('tab-aziende').classList.add('active');
-    };
-  </script>
 
 </body>
 </html>
