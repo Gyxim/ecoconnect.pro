@@ -1,41 +1,40 @@
-<!DOCTYPE html>
+# Create the HTML file for preview
+html_content = """<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EcoConnect Pro</title>
   <style>
-    /* Semplice CSS inline per layout responsive */
     body { margin:0; font-family: sans-serif; background: #f0fdf4; color: #1f2937; }
     header { background: #dcfce7; padding: 2rem; text-align: center; }
     header h1 { margin:0; color:#166534; font-size:2.5rem; }
-    header p { margin-top:0.5rem; color:#4b5563; max-width:600px; margin-left:auto; margin-right:auto; }
+    header p { margin-top:0.5rem; color:#4b5563; max-width:600px; margin:0 auto; }
     .btn { display:inline-block; margin-top:1rem; background:#16a34a; color:#fff; padding:0.75rem 1.5rem; border-radius:6px; text-decoration:none; }
     section { padding:4rem 1rem; }
     .grid { display:grid; gap:1.5rem; }
-    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
-    .card { background:#fff; border-radius:8px; padding:1rem; text-align:center; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .card { background:#fff; border-radius:8px; padding:1.5rem; text-align:left; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
     .card h3 { margin:0.5rem 0; color:#166534; }
-    .card p { margin:0; color:#4b5563; font-size:0.9rem; }
+    .card p { margin:0.5rem 0; color:#4b5563; font-size:0.95rem; }
+    .card ul { margin:0.5rem 0 0 1rem; padding:0; color:#4b5563; font-size:0.9rem; }
     form { max-width:500px; margin:0 auto; display:grid; gap:1rem; }
     input, textarea { width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px; }
     .tabs { max-width:600px; margin:0 auto; }
     .tabs nav { display:flex; }
     .tabs button { flex:1; padding:0.75rem; border:none; background:#e5e7eb; cursor:pointer; }
     .tabs button.active { background:#16a34a; color:#fff; }
-    .tabs .content { background:#fff; padding:1.5rem; border:1px solid #cbd5e1; border-top:none; }
+    .tabs .content { display:none; background:#fff; padding:1.5rem; border:1px solid #cbd5e1; border-top:none; }
+    .tabs .content.active { display:block; }
     footer { background:#dcfce7; padding:2rem; text-align:center; font-size:0.8rem; color:#4b5563; }
-    @media (min-width:640px) {
-      header h1 { font-size:3rem; }
-      section { padding:6rem 2rem; }
-    }
+    @media (min-width:640px) { header h1 { font-size:3rem; } section { padding:6rem 2rem; } }
   </style>
 </head>
 <body>
 
   <header>
     <h1>EcoConnect Pro</h1>
-    <p>La prima piattaforma eco‑friendly che connette aziende e professionisti etici per generare lead qualificati e creare team di lavoro sostenibili.</p>
+    <p>La piattaforma eco‑friendly che connette aziende e professionisti etici per generare lead qualificati e creare team di lavoro sostenibili.</p>
     <a href="#form" class="btn">Unisciti Ora</a>
   </header>
 
@@ -43,26 +42,42 @@
     <h2 style="text-align:center; color:#166534;">Come funziona</h2>
     <div class="grid grid-3" style="margin-top:2rem;">
       <div class="card">
-        <h3>Scegli il tuo ruolo</h3>
-        <p>Funnel Strategist, Setter, Closer o Team Builder.</p>
+        <h3>1. Scegli il tuo ruolo</h3>
+        <p>Seleziona il ruolo più adatto alle tue competenze o crea un team:</p>
+        <ul>
+          <li><strong>Funnel Strategist:</strong> Progetta funnel di acquisizione e landing page.</li>
+          <li><strong>Setter:</strong> Pre-qualifica i lead tramite chat, email o call.</li>
+          <li><strong>Closer:</strong> Gestisce la chiusura dei contratti con approccio etico.</li>
+          <li><strong>Team Builder:</strong> Aggrega professionisti per progetti su misura.</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Crea il tuo profilo etico</h3>
-        <p>Rispetta il codice etico e ricevi badge di merito e skill.</p>
+        <h3>2. Crea il tuo profilo etico</h3>
+        <p>Costruisci un profilo trasparente e accattivante:</p>
+        <ul>
+          <li>Inserisci esperienza, casi studio e valori.</li>
+          <li>Aggiungi badge di merito per competenze e sostenibilità.</li>
+          <li>Pubblica risultati e feedback raccolti.</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Connettiti con aziende</h3>
-        <p>Lavora in autonomia o aggregati a team flessibili da remoto.</p>
+        <h3>3. Connettiti e collabora</h3>
+        <p>Lavora in autonomia o unisciti a team flessibili:</p>
+        <ul>
+          <li>Trova progetti in linea con i tuoi valori.</li>
+          <li>Entra in team esistenti o proponi il tuo.</li>
+          <li>Accedi a strumenti AI e formazione continua.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section style="background:#ecfdf5;">
+  <section style="background:#ecfdf5;" id="form">
     <h2 style="text-align:center; color:#166534;">Registrati ora</h2>
-    <form id="form">
+    <form>
       <input type="text" placeholder="Nome completo" required>
       <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Ruolo (Funnel, Setter, Closer...)" required>
+      <input type="text" placeholder="Ruolo (Funnel, Setter, Closer, Team Builder...)" required>
       <textarea rows="4" placeholder="Perché vuoi entrare nella community?" required></textarea>
       <button type="submit" class="btn">Invia la tua candidatura</button>
     </form>
@@ -74,6 +89,62 @@
         <button id="tab-pro" class="active">Professionisti</button>
         <button id="tab-aziende">Aziende</button>
       </nav>
+      <div id="content-pro" class="content active">
+        <p>Accedi a un ecosistema dove la tua professionalità viene riconosciuta. Lavora da remoto, forma team, partecipa ad eventi. Pagamenti anche in crypto.</p>
+      </div>
+      <div id="content-aziende" class="content">
+        <p>Trova i migliori freelance per generare lead, funnel etici e chiusura vendite. Paghi solo a servizio, con commissione per la piattaforma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#ecfdf5; text-align:center;">
+    <h3 style="color:#166534;">Curiosità</h3>
+    <p>Scopri la visione di EcoConnect Pro nel nostro White Paper: etica, AI, decentralizzazione e sostenibilità.</p>
+    <a href="https://raw.githubusercontent.com/Gyxim/ecoconnect.pro/main/whitepaper.pdf" class="btn" target="_blank">Scarica il White Paper</a>
+  </section>
+
+  <section style="text-align:center;">
+    <h3 style="color:#166534;">AI Assistant</h3>
+    <p>Un assistente virtuale ti guida fin dall’homepage: info, supporto, prenotazioni chiamate e onboarding automatico.</p>
+    <a href="#" class="btn">Provalo Subito</a>
+  </section>
+
+  <section style="background:#f7fdfa; text-align:center;">
+    <h3 style="color:#166534;">Accesso</h3>
+    <p>Iscriviti gratuitamente, completa il profilo e accedi ai servizi premium con abbonamenti o commissioni sulle prestazioni (in € o crypto).</p>
+  </section>
+
+  <footer>
+    © 2025 EcoConnect Pro – Piattaforma Etica, Decentralizzata e Remota per la Nuova Generazione di Professionisti
+  </footer>
+
+  <script>
+    document.getElementById('tab-pro').onclick = () => {
+      document.getElementById('content-pro').classList.add('active');
+      document.getElementById('content-aziende').classList.remove('active');
+      document.getElementById('tab-pro').classList.add('active');
+      document.getElementById('tab-aziende').classList.remove('active');
+    };
+    document.getElementById('tab-aziende').onclick = () => {
+      document.getElementById('content-pro').classList.remove('active');
+      document.getElementById('content-aziende').classList.add('active');
+      document.getElementById('tab-pro').classList.remove('active');
+      document.getElementById('tab-aziende').classList.add('active');
+    };
+  </script>
+
+</body>
+</html>
+"""
+
+# Write the file
+file_path = "/mnt/data/index.html"
+with open(file_path, "w") as f:
+    f.write(html_content)
+
+file_path
+
       <div id="content-pro" class="content">
         <p>Accedi a un ecosistema dove la tua professionalità viene riconosciuta. Lavora da remoto, forma team, partecipa ad eventi. Pagamenti anche in crypto.</p>
       </div>
