@@ -1,75 +1,108 @@
-""import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Users, Leaf, Globe2 } from "lucide-react";
+import { CheckCircle, Users, Leaf, Globe2, Bot } from "lucide-react";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <header className="bg-green-100 p-6 flex flex-col items-center text-center">
+        <img src="/logo.png" alt="EcoConnect Pro Logo" className="h-12 mb-2" />
         <h1 className="text-4xl font-bold text-green-800">EcoConnect Pro</h1>
         <p className="mt-2 text-lg text-gray-600 max-w-xl">
-          La prima piattaforma eco-friendly che connette aziende e professionisti etici per generare lead qualificati e creare team di lavoro sostenibili.
+          La piattaforma etica e decentralizzata che connette aziende e professionisti sostenibili per lead qualificati e progetti condivisi.
         </p>
-        <Button className="mt-4 bg-green-600 text-white hover:bg-green-700">Unisciti Ora</Button>
+        <Button className="mt-4 bg-green-600 text-white hover:bg-green-700">Accedi Gratuitamente</Button>
       </header>
 
       <section className="py-10 px-4 md:px-20 grid gap-6">
         <h2 className="text-2xl font-bold text-center text-green-700">Come funziona</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <Card>
-            <CardContent className="p-4 flex flex-col items-center text-center">
-              <Users className="text-green-600 w-8 h-8 mb-2" />
+            <CardContent className="p-4 text-center">
+              <Users className="text-green-600 w-8 h-8 mb-2 mx-auto" />
               <h3 className="font-semibold">Scegli il tuo ruolo</h3>
-              <p className="text-sm text-gray-600">Seleziona tra Funnel Strategist, Setter, Closer o crea una richiesta per formare un Team Builder personalizzato.</p>
+              <p className="text-sm text-gray-600">Seleziona Funnel Strategist, Setter, Closer o proponi il tuo Team Builder personalizzato tramite una finestra dedicata.</p>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-4 flex flex-col items-center text-center">
-              <CheckCircle className="text-green-600 w-8 h-8 mb-2" />
+            <CardContent className="p-4 text-center">
+              <CheckCircle className="text-green-600 w-8 h-8 mb-2 mx-auto" />
               <h3 className="font-semibold">Crea il tuo profilo etico</h3>
-              <p className="text-sm text-gray-600">Rispetta il codice etico, ottieni badge e stelle in base a meriti, feedback e partecipazione attiva.</p>
+              <p className="text-sm text-gray-600">Compila il tuo profilo con foto, esperienze, ruoli e ottieni badge e stelle di reputazione.</p>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-4 flex flex-col items-center text-center">
-              <Globe2 className="text-green-600 w-8 h-8 mb-2" />
+            <CardContent className="p-4 text-center">
+              <Globe2 className="text-green-600 w-8 h-8 mb-2 mx-auto" />
               <h3 className="font-semibold">Connettiti con aziende</h3>
-              <p className="text-sm text-gray-600">Lavora in autonomia o aggregati a team flessibili da remoto. Match visibilità in base alle stelle del tuo profilo.</p>
+              <p className="text-sm text-gray-600">Collabora da remoto con team esistenti o forma il tuo network etico.</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
+      <section className="py-10 px-4 md:px-20 bg-gray-50">
+        <h2 className="text-xl font-bold text-center text-green-700 mb-6">AI Assistant</h2>
+        <div className="flex flex-col items-center text-center">
+          <Bot className="text-green-600 w-10 h-10 mb-2" />
+          <p className="max-w-xl text-gray-700">
+            Un assistente virtuale ti guida fin dall’homepage: info, supporto, onboarding automatico e prenotazione chiamate.
+          </p>
+          <Button className="mt-4 bg-green-600 text-white hover:bg-green-700">Provalo Subito</Button>
+        </div>
+      </section>
+
+      <section className="py-10 px-4 md:px-20 bg-white">
+        <h2 className="text-xl font-bold text-center text-green-700 mb-6">Accesso</h2>
+        <p className="text-center max-w-xl mx-auto text-gray-700">
+          Iscriviti gratuitamente, completa il profilo e accedi ai servizi premium con abbonamenti o commissioni sulle prestazioni (in € o crypto). Le possibilità di essere selezionato aumentano in base alle stelle guadagnate.
+        </p>
+      </section>
+
+      <section className="py-10 bg-gray-100 px-4 md:px-20">
+        <h2 className="text-2xl font-bold text-center text-green-700 mb-4">Registrati ora</h2>
+        <form className="grid gap-4 max-w-xl mx-auto">
+          <Input placeholder="Nome completo" />
+          <Input placeholder="Email" type="email" />
+          <Input placeholder="Ruolo (Funnel, Setter, Closer...)" />
+          <Textarea placeholder="Perché vuoi entrare nella community?" />
+          <Button className="bg-green-600 text-white hover:bg-green-700">Invia la tua candidatura</Button>
+        </form>
+      </section>
+
       <section className="py-10 px-4 md:px-20">
-        <h2 className="text-2xl font-bold text-center text-green-700 mb-6">Pacchetti di Accesso</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card className="border border-green-200">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-bold text-green-700">Base</h3>
-              <p className="text-sm text-gray-600 mt-2">Accesso gratuito alla community, profilo visibile, supporto AI, eventi online e whitepaper.</p>
-              <p className="font-semibold text-lg mt-4">€0</p>
-              <Button className="mt-4 w-full bg-green-600 text-white">Attiva</Button>
-            </CardContent>
-          </Card>
-          <Card className="border border-green-300">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-bold text-green-800">Pro</h3>
-              <p className="text-sm text-gray-600 mt-2">Tutti i vantaggi Base + possibilità di essere selezionato dalle aziende in base alle stelle del profilo, visibilità premium, toolkit AI e formazione.</p>
-              <p className="font-semibold text-lg mt-4">€29/mese</p>
-              <Button className="mt-4 w-full bg-green-700 text-white">Scopri</Button>
-            </CardContent>
-          </Card>
-          <Card className="border border-green-400">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-bold text-green-900">Elite</h3>
-              <p className="text-sm text-gray-600 mt-2">Priorità assoluta nel matching, mentoring personalizzato, inviti a eventi esclusivi e zero commissioni sulle prestazioni.</p>
-              <p className="font-semibold text-lg mt-4">€79/mese</p>
-              <Button className="mt-4 w-full bg-green-800 text-white">Scopri</Button>
-            </CardContent>
-          </Card>
+        <Tabs defaultValue="professionisti" className="w-full">
+          <TabsList className="grid grid-cols-2 w-full mb-4">
+            <TabsTrigger value="professionisti">Per i Professionisti</TabsTrigger>
+            <TabsTrigger value="aziende">Per le Aziende</TabsTrigger>
+          </TabsList>
+          <TabsContent value="professionisti">
+            <p className="text-gray-700 text-center">
+              Accedi a una piattaforma dove la tua professionalità viene riconosciuta. Impara la skill del futuro: l’arte del Prompting con script personalizzati basati su AI. Collabora, forma team, ottieni badge e visibilità.
+            </p>
+          </TabsContent>
+          <TabsContent value="aziende">
+            <p className="text-gray-700 text-center">
+              Costruisci il tuo team etico, scegli uno preformato oppure integra AI Assistant personalizzati nel tuo flusso di lavoro: prenotano, rispondono, parlano la tua lingua e ti aiutano a convertire meglio.
+            </p>
+          </TabsContent>
+        </Tabs>
+      </section>
+
+      <section className="py-10 px-4 md:px-20">
+        <h2 className="text-xl font-bold text-green-700 text-center mb-4">Whitepaper Fase 1/2</h2>
+        <div className="text-center">
+          <a
+            href="/whitepaper-ecoconnect-pro.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 underline"
+          >
+            Scarica il documento completo 📄
+          </a>
         </div>
       </section>
 
